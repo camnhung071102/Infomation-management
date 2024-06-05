@@ -1,0 +1,66 @@
+body {
+	background-color: #ccffff;
+	font-family: MS pgothic;
+	margin: 20px 20px 20px 20px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.welcome {
+	order: 1;
+}
+
+.myLink {
+	order: 2;
+}
+
+input[type="file"] {
+	
+}
+
+.kk {
+	background-color: #3366ff;
+	border: none;
+	height: 20px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+table {
+	margin-left: 590px;
+}
+
+.btnUp, .btnDown, .btnLeft, .btnRight {
+	width: 40px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.btnSave, .btnCancel {
+	width: 80px;
+	height: 20px;
+}
+
+.btnSave {
+	margin-left: 40px;
+}
+
+.btnCancel {
+	margin-left: 10px;
+}
+select {
+	overflow: hidden;
+}
+
+
+.error {
+	margin-left: 650px;
+}
+
+.message {
+	height: 50px;
+}

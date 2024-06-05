@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	font-family: MS PGothic;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+body {
+	background-color: #CCFFFF;
+}
+
+.footer {
+	position: absolute;
+	bottom: 5px;
+	left: 15px;
+	right: 15px;
+}
+
+hr {
+	border-color: black;
+}
+
+h1 {
+	color: #ff0000;
+	font-family: Times New Roman;
+}
+
+p {
+	margin: 5px;
+	margin-left: 10px;
+}
+
+input[type=text], input[type=password], select, textarea {
+	width: 180px;
+	background-color: #ffffff;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+input[type=button], input[type=submit], button[type=submit], button[type=button], input[type=file] {
+	width: 80px;
+	padding: 3px;
+	background-color: #c0c0c0;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 2px solid black;
+	border-right: 2px solid black;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 4px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container_1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1px;
+}
+
+.container_1 input[type=button], input[type=submit], button[type=submit], button[type=button] {
+	width: 50px;
+	margin: 0;
+	background-color: #c0c0c0;
+	margin-left: -5px;
+}
+
+.item_1 {
+	order: 1;
+	padding-left: 10px;
+}
+
+.item_2 {
+	order: 2;
+}
+
+.item_3 {
+	order: 1;
+}
+
+.rectangle_1 {
+	height: 20px;
+	background-color: #3366ff;
+	margin: 10px;
+	margin-bottom: 0px;
+	padding: 2px;
+	padding-left: 15px;
+}

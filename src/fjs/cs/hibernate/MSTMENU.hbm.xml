@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fjs.cs.dto.MSTMENU" table="MSTMENU">
+		<id name="screenId" type="string">
+			<column name="SCREENID" />
+			<generator class="assigned" />
+		</id>
+		<property name="screenName" type="string">
+			<column name="SCREENNAME"  />
+		</property>
+	</class>
+</hibernate-mapping>

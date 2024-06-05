@@ -1,0 +1,182 @@
+body {
+	background-color: #ccffff;
+	font-family: MS pgothic;
+	margin: 20px 20px 20px 20px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.welcome {
+	order: 1;
+}
+
+.myLink {
+	order: 2;
+}
+
+.setHeight {
+	height: 290px;
+	margin-bottom: 10px;
+}
+
+.kk {
+	background-color: #3366ff;
+	border: none;
+	height: 20px;
+	margin-top: 30px;
+
+}
+
+.box {
+	padding: 20px 5px 0px 5px;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+}
+
+.input {
+	width: 100px;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+table tr:nth-child(even) {
+	background-color: white;
+	color: black;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed
+}
+
+table {
+	border: 1px solid #339966;
+	text-align: left;
+}
+
+table tr:last-child {
+	border-bottom: none;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.btnSearch {
+	width: 100px;
+	font-size: 15px;
+	margin-right: 20px;
+	font-family: MS pgothic;
+}
+
+#btnFirst {
+	margin-left: 0;
+}
+
+#btnLast {
+	margin-left: 0;
+}
+
+.btnpage {
+	width: 50px;
+}
+
+select {
+	width: 100px
+}
+
+.btnDelete {
+	margin-left: 30px;
+}
+
+.btnExport {
+	margin-left: 500px;
+}
+
+.btnImport {
+	margin-left: 20px;
+}
+
+.btnSetting {
+	float: right;
+}
+
+.btnAdd, .btnSetting {
+	width: 150px;
+	font-size: 15px;
+	font-family: MS pgothic;
+}
+
+.btnDelete, .btnImport, .btnExport {
+	width: 100px;
+	font-size: 15px;
+	font-family: MS pgothic;
+}
+
+.errorEx {
+	height: 30px;
+	magin-bottom: 10px;
+}
+
+.bf {
+	padding-left: 20px;
+}
+
+.af {
+	margin-right: 20px;
+}
+
+.lb {
+	margin-right: 20px;
+	padding-left: 20px;
+}
+
+select {
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.kc {
+	margin-right: 20px;
+}
+
+.bapage {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.bapage div {
+	display: inline;
+}
+
+.after {
+	magin-right: 20px;
+	float: right;
+}
+
+.box div {
+	float: left;
+	background-color: #ffff99;
+}
+
+.add {
+	width: 150px;
+	font-family: MS pgothic;
+}
+
+.delete {
+	width: 100px;
+	font-family: MS pgothic;
+}

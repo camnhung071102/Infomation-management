@@ -1,0 +1,84 @@
+body {
+	background-color: #ccffff;
+	font-family: MS pgothic;
+	margin: 20px 20px 20px 20px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.welcome {
+	order: 1;
+}
+
+.myLink {
+	order: 2;
+}
+
+input[type="file"] {
+	
+}
+
+.kk {
+	background-color: #3366ff;
+	border: none;
+	height: 20px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.lb {
+	margin-right: 20px;
+	padding-left: 20px;
+}
+
+.importFile {
+	display: none;
+}
+
+.upload {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 1px 23px;
+	cursor: pointer;
+	background-color: #efefef;
+	border-radius: 2px;
+	margin-left: 20px;
+}
+
+#getName {
+	width: 280px;
+}
+
+.btnCancel {
+	margin-left: 130px;
+}
+
+button {
+	font-size: 14px;
+	font-family: MS pgothic;
+	width: 90px;
+	font-family: MS pgothic;
+}
+
+.browser {
+	margin-top: 150px;
+	margin-left: 620px;
+	margin-bottom: 30px;
+}
+
+ .error {
+	margin-left: 630px;
+	width: 400x;
+	margin-top: 50px;
+	color: red;
+	height :200px;
+} 
+
+.import {
+	margin-left: 620px;
+	width: 500px;
+}

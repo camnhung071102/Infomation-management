@@ -1,0 +1,69 @@
+login @charset "UTF-8";
+
+body {
+	background-color: #ccffff;
+	font-family: MS pgothic;
+	margin: 20px 20px 20px 20px;
+}
+
+h3 {
+	magrin-top: 0;
+}
+
+button {
+	font-family: MS pgothic;
+	width: 70px;
+}
+
+.container {
+	margin: 150px 600px;
+}
+
+.tform {
+	text-align: center;
+	color: #3366ff;
+	font-weight: 1000;
+	font-size: 30px;
+}
+
+label {
+	color: #ff0000;
+	margin-top: 0;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.input {
+	margin-left: 10px;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}
+
+#btnLogin {
+	margin-right: 130px;
+	margin-top: 15px;
+}
+
+#btnClear {
+	width: 70px;
+	margin-right: 35px;
+}
+
+table {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 98%;
+}
+
+p {
+	margin: 0 0;
+}

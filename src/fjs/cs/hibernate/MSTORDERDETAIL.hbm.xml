@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fjs.cs.dto.MSTORDERDETAIL" table="MSTORDERDETAIL">
+		<id name="orderDetailId" type="string">
+			<column name="ORDERDETAIL_ID" />
+			<generator class="assigned" />
+		</id>
+		<property name="orderId" type="string">
+			<column name="ORDER_ID" length="8" />
+		</property>
+		<property name="productId" type="string">
+			<column name="PRODUCT_ID" />
+		</property>
+		<property name="quantity" type="int">
+			<column name="QUANTITY" />
+		</property>
+			<property name="price" type="int">
+			<column name="PRICE" />
+		</property>
+	</class>
+</hibernate-mapping>

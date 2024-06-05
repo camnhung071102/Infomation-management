@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd 
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>/WEB-INF/data.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="${db.driverClassName}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.userName}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>fjs/cs/hibernate/MSTUSER.hbm.xml</value>
+				<value>fjs/cs/hibernate/MSTCUSTOMER.hbm.xml</value>
+				<value>fjs/cs/hibernate/MSTMENU.hbm.xml</value>
+				<value>fjs/cs/hibernate/MSTSTAFFMENU.hbm.xml</value>
+				<value>fjs/cs/hibernate/MSTORDER.hbm.xml</value>
+				<value>fjs/cs/hibernate/MSTORDERDETAIL.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loginDao" class="fjs.cs.dao.LoginDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="loginLogic" class="fjs.cs.logic.LoginLogic">
+		<property name="loginDao" ref="loginDao"></property>
+	</bean>
+	<bean id="searchDao" class="fjs.cs.dao.SearchDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="searchLogic" class="fjs.cs.logic.SearchLogic">
+		<property name="searchDao" ref="searchDao"></property>
+	</bean>
+	<bean id="editDao" class="fjs.cs.dao.EditDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="editLogic" class="fjs.cs.logic.EditLogic">
+		<property name="editDao" ref="editDao"></property>
+	</bean>
+	<bean id="importDao" class="fjs.cs.dao.ImportDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="importLogic" class="fjs.cs.logic.ImportLogic">
+		<property name="importDao" ref="importDao"></property>
+	</bean>
+	<bean id="settingDao" class="fjs.cs.dao.SettingDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="settingLogic" class="fjs.cs.logic.SettingLogic">
+		<property name="settingDao" ref="settingDao"></property>
+	</bean>
+	<bean id="searchUserDao" class="fjs.cs.dao.SearchUserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="searchUserLogic" class="fjs.cs.logic.SearchUserLogic">
+		<property name="searchUserDao" ref="searchUserDao"></property>
+	</bean>
+	<bean id="settingMenuDao" class="fjs.cs.dao.SettingMenuDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="settingMenuLogic" class="fjs.cs.logic.SettingMenuLogic">
+		<property name="settingMenuDao" ref="settingMenuDao"></property>
+	</bean>
+		<bean id="searchOrderDao" class="fjs.cs.dao.SearchOrderDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="searchOrderLogic" class="fjs.cs.logic.SearchOrderLogic">
+		<property name="searchOrderDao" ref="searchOrderDao"></property>
+	</bean>
+		<bean id="orderDetailDao" class="fjs.cs.dao.OrderDetailDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="orderDetailLogic" class="fjs.cs.logic.OrderDetailLogic">
+		<property name="orderDetailDao" ref="orderDetailDao"></property>
+	</bean>
+</beans>

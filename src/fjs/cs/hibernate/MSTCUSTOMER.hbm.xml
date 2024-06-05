@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fjs.cs.dto.MSTCUSTOMER" table="MSTCUSTOMER">
+		<id name="customerID" type="int">
+			<column name="CUSTOMER_ID" />
+			<generator class="native" />
+		</id>
+		<property name="customerName" type="string">
+			<column name="CUSTOMER_NAME" length="50" />
+		</property>
+		<property name="sex" type="string">
+			<column name="SEX" length="1" />
+		</property>
+		<property name="birthday" type="string">
+			<column name="BIRTHDAY" length="10" />
+		</property>
+		<property name="email" type="string">
+			<column name="EMAIL" length="50" />
+		</property>
+		<property name="address" type="string">
+			<column name="ADDRESS" length="256" />
+		</property>
+		<property name="delete_ymd" type="date">
+			<column name="DELETE_YMD" />
+		</property>
+		<property name="insert_ymd" type="date">
+			<column name="INSERT_YMD" />
+		</property>
+		<property name="insert_psn_cd" type="int">
+			<column name="INSERT_PSN_CD" />
+		</property>
+		<property name="update_ymd" type="date">
+			<column name="UPDATE_YMD" />
+		</property>
+		<property name="update_psn_cd" type="int">
+			<column name="UPDATE_PSN_CD" />
+		</property>
+	</class>
+</hibernate-mapping>

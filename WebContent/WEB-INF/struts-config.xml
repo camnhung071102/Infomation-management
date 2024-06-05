@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+	<form-beans>
+		<form-bean name="user" type="fjs.cs.model.LoginBean" />
+		<form-bean name="customer" type="fjs.cs.model.SearchBean" />
+		<form-bean name="editId" type="fjs.cs.model.EditBean" />
+		<form-bean name="importFile" type="fjs.cs.model.ImportBean" />
+		<form-bean name="settingBean" type="fjs.cs.model.SettingBean" />
+		<form-bean name="searchUserBean" type="fjs.cs.model.SearchUserBean" />
+		<form-bean name="settingMenuBean" type="fjs.cs.model.SettingMenuBean" />
+		<form-bean name="searchOrderBean" type="fjs.cs.model.SearchOrderBean" />
+		<form-bean name="orderDetailBean" type="fjs.cs.model.OrderDetailBean" />
+	</form-beans>
+	<global-forwards>
+		<forward name="login" path="/loginAction.do"></forward>
+	</global-forwards>
+	<action-mappings>
+		<action path="/loginAction" type="fjs.cs.action.LoginAction" name="user" scope="request" input="/WEB-INF/jsp/Login.jsp">
+			<forward name="login" path="/WEB-INF/jsp/Login.jsp" />
+			<forward name="search" path="/searchAction.do" redirect="true" />
+			<forward name="searchUser" path="/searchUserAction.do" redirect="true" />
+			<forward name="searchOrder" path="/searchOrderAction.do" redirect="true" />
+		</action>
+		<action path="/searchAction" type="fjs.cs.action.SearchAction" name="customer" scope="request" input="/WEB-INF/jsp/Search.jsp">
+			<forward name="search" path="/WEB-INF/jsp/Search.jsp" />
+			<forward name="edit" path="/editAction.do" redirect="true" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+			<forward name="import" path="/importAction.do" redirect="true" />
+			<forward name="setting" path="/settingAction.do" redirect="true" />
+			<forward name="searchUser" path="/searchUserAction.do" redirect="true" />
+			<forward name="searchOrder" path="/searchOrderAction.do" redirect="true" />
+		</action>
+		<action path="/editAction" type="fjs.cs.action.EditAction" scope="request" name="editId" input="/WEB-INF/jsp/Edit.jsp">
+			<forward name="edit" path="/WEB-INF/jsp/Edit.jsp" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+			<forward name="search" path="/searchAction.do" redirect="true" />
+		</action>
+		<action path="/importAction" type="fjs.cs.action.ImportAction" scope="request" name="importFile" input="/WEB-INF/jsp/Import.jsp">
+			<forward name="import" path="/WEB-INF/jsp/Import.jsp" />
+			<forward name="search" path="/searchAction.do" redirect="true" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+		</action>
+		<action path="/settingAction" type="fjs.cs.action.SettingAction" scope="request" name="settingBean" input="/WEB-INF/jsp/SettingHeader.jsp">
+			<forward name="setting" path="/WEB-INF/jsp/SettingHeader.jsp" />
+			<forward name="search" path="/searchAction.do" redirect="true" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+		</action>
+			<action path="/searchUserAction" type="fjs.cs.action.SearchUserAction" scope="request" name="searchUserBean" input="/WEB-INF/jsp/SearchUser.jsp">
+			<forward name="searchUser" path="/WEB-INF/jsp/SearchUser.jsp" />
+			<forward name="search" path="/searchAction.do" redirect="true" />
+			<forward name="searchOrder" path="/searchOrderAction.do" redirect="true" />
+		</action>
+			<action path="/settingMenuAction" type="fjs.cs.action.SettingMenuAction" scope="request" name="settingMenuBean" input="/WEB-INF/jsp/SettingMenu.jsp">
+			<forward name="settingMenu" path="/WEB-INF/jsp/SettingMenu.jsp" />
+			<forward name="searchUser" path="/searchUserAction.do" redirect="true" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+		</action>
+			<action path="/searchOrderAction" type="fjs.cs.action.SearchOrderAction" scope="request" name="searchOrderBean" input="/WEB-INF/jsp/SearchOrder.jsp">
+			<forward name="searchOrder" path="/WEB-INF/jsp/SearchOrder.jsp" />
+			<forward name="search" path="/searchAction.do" redirect="true" />
+			<forward name="searchUser" path="/searchUserAction.do" redirect="true" />
+			<forward name="orderDetail" path="/orderDetailAction.do" redirect="true" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+		</action>
+			<action path="/orderDetailAction" type="fjs.cs.action.OrderDetailAction" scope="request" name="orderDetailBean" input="/WEB-INF/jsp/OrderDetail.jsp">
+			<forward name="orderDetail" path="/WEB-INF/jsp/OrderDetail.jsp" />
+			<forward name="searchOrder" path="/searchOrderAction.do" redirect="true" />
+			<forward name="login" path="/logicAction.do" redirect="true" />
+		</action>
+	</action-mappings>
+	
+	<message-resources parameter="message"
+		null="false" />
+</struts-config>

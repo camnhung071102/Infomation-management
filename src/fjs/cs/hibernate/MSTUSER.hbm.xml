@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fjs.cs.dto.MSTUSER" table="MSTUSER">
+		<id name="psnCd" type="int">
+			<column name="PSN_CD" />
+			<generator class="assigned" />
+		</id>
+		<property name="userId" type="string">
+			<column name="USERID" length="8" />
+		</property>
+		<property name="password" type="string">
+			<column name="PASSWORD" length="8" />
+		</property>
+		<property name="userName" type="string">
+			<column name="USERNAME" length="40" />
+		</property>
+		<property name="deleteYMD" type="timestamp">
+			<column name="DELETE_YMD" />
+		</property>
+		<property name="insertYMD" type="timestamp">
+			<column name="INSERT_YMD" />
+		</property>
+		<property name="insertPSNCD" type="int">
+			<column name="INSERT_PSN_CD" />
+		</property>
+		<property name="updateYMD" type="timestamp">
+			<column name="UPDATE_YMD" />
+		</property>
+		<property name="updatePSNCD" type="int">
+			<column name="UPDATE_PSN_CD" />
+		</property>
+		<property name="type" type="string">
+			<column name="TYPE" />
+		</property>
+	</class>
+</hibernate-mapping>

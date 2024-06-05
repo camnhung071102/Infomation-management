@@ -1,0 +1,93 @@
+body {
+	background-color: #ccffff;
+	font-family: MS pgothic;
+	margin: 20px 20px 20px 20px;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.welcome {
+	order: 1;
+}
+
+.myLink {
+	order: 2;
+}
+
+.setHeight {
+	height: 540px
+}
+
+.error {
+	margin-top: 15px;
+	align: center;
+	font-size:15px;
+	font-weight: bold;
+	height:12px;
+}
+
+.kk {
+	background-color: #3366ff;
+	border: none;
+	height: 20px;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 5px;
+}
+
+.kk .edit {
+	margin-left: 15px;
+	font-weight: bold;
+}
+
+
+
+.input, textarea, select {
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}
+
+input {
+	width: 150px;
+}
+
+textarea {
+	width: 300px;
+	height: 50px;
+}
+
+#button {
+	width: 120px;
+	  font-size:15px;
+    font-family: MS pgothic;
+}
+
+.box {
+	padding: 20px 5px 0px 5px;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50px;
+}
+
+.save {
+	margin-right: 40px;
+}
+
+.cancel {
+	margin-left: 40px;
+}
+
+.box div {
+	float: left;
+	background-color: #ffff99;
+}
+
+table {
+	width: 99%;
+	height: 340px;
+}
